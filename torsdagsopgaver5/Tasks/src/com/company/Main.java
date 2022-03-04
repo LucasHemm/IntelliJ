@@ -80,7 +80,7 @@ public class Main{
         //task 2
         private static void printFirstHalfOfEachWord(){
             for(String s: text){
-                System.out.println(s.substring(s.length()/2));
+                System.out.println(s.substring(0,s.length()/2));
             }
         }
         //task 3
