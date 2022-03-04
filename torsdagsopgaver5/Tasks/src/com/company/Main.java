@@ -27,7 +27,9 @@ public class Main{
 
 
         //test dine metoder ved at kalde dem her:
-        printLongestWord();
+        //printLongestWord();
+        printFirstHalfOfEachWord();
+
 
     }
 
@@ -62,18 +64,29 @@ public class Main{
             }
         }
     }
-    //skriv dine metoder herunder:
-    private static void printLongestWord(){
-        int counter = 0;
-        String longestWord ="";
-        for(String s : text){
-            if(s.length() > counter){
-                counter = s.length();
-               longestWord = s;
+        //skriv dine metoder herunder:
+        //task 1
+        private static void printLongestWord(){
+            int counter = 0;
+            String longestWord ="";
+            for(String s : text){
+                if(s.length() > counter){
+                    counter = s.length();
+                   longestWord = s;
+                }
+            }
+            System.out.println(longestWord);
+        }
+        //task 2
+        private static void printFirstHalfOfEachWord(){
+            for(String s: text){
+                System.out.println(s.substring(s.length()/2));
             }
         }
-        System.out.println(longestWord);
-    }
+        //task 3
+        private static void printMostFrequentLetter(){
+        
+        }
 
 
 }
