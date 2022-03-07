@@ -1,2 +1,4 @@
-hej med dig: 12312
-123123
+Lucas: 10000
+Hans: 20000
+Peter: 30000
+Nikolaj: 50

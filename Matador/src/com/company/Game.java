@@ -16,6 +16,14 @@ public class Game {
          */
         ArrayList<String> data = new ArrayList<>();
         data = fileio.readGameData();
+        for(String s : data){
+            String[] values = s.split(": ");
+           System.out.println(values[0]);
+            System.out.println(values[1]);
+            int balance = Integer.parseInt(values[1]);
+            Player p = new Player(values[0], balance);
+            players.add(p);
+        }
     }
 
 
