@@ -6,7 +6,7 @@ public class Player {
     String name;
 
     public Player(String name, int balance){
-
+        account = new BankAccount(balance);
         this.name = name;
 
 
