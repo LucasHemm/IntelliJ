@@ -8,8 +8,7 @@ import java.util.Scanner;
 public class FileIO {
     ArrayList<String> readGameData() {
 
-
-    File file = new File("data.txt");
+    File file = new File("src/data.txt");
     ArrayList<String> data = new ArrayList<>();
 
     try{

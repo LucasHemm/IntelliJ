@@ -14,7 +14,8 @@ public class Game {
         players.add(player2);
         players.add(player3);
          */
-
+        ArrayList<String> data = new ArrayList<>();
+        data = fileio.readGameData();
     }
 
 
