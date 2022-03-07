@@ -4,6 +4,7 @@ public class BankAccount {
     public BankAccount(int balance){
         this.balance = balance;
     }
+
     public int getBalance(){
         return this.balance;
     }

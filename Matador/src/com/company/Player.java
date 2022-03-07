@@ -12,15 +12,12 @@ public class Player {
     public String getName(){
         return this.name;
     }
-    public BankAccount getAccount(){
-        return account;
+    public int getBalance(){
+        return account.getBalance();
     }
-
 
     @Override
     public String toString(){
-        return this.name + " " + account.getBalance();
+        return this.name + ": " + account.getBalance();
     }
-
-
 }

@@ -23,4 +23,3 @@ public class FileIO {
         return data;
     }
 }
-
