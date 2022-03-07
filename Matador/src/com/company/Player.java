@@ -12,7 +12,7 @@ public class Player {
     public String getName(){
         return this.name;
     }
-    public BankAccount getBalance(){
+    public BankAccount getAccount(){
         return account;
     }
 
