@@ -2,4 +2,9 @@ package com.company;
 
 public class BankAccount {
     int balance;
+
+    public BankAccount(int balance){
+
+    }
+
 }
