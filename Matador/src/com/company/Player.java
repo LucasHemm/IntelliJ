@@ -7,6 +7,9 @@ public class Player {
 
     public Player(String name, int balance){
 
+        this.name = name;
+
+
     }
 
 }
