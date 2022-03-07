@@ -125,7 +125,6 @@ public class Main{
                     //System.out.println("else statement");
                 }
             }
-
            // for(int i = 0; i <= chars.size(); i++){
         }
 
