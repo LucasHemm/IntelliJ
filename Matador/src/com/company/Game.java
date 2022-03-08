@@ -6,7 +6,7 @@ public class Game {
     FileIO fileio = new FileIO();
 
     public Game(){
-        ArrayList<String> data = new ArrayList<>();
+        ArrayList<String> data;
         data = fileio.readGameData();
         for(String s : data){
             String[] values = s.split(": ");
