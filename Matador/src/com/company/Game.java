@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Game {
     ArrayList<Player> players = new ArrayList<>();
-    FileIO fileio = new FileIO();
+    private FileIO fileio = new FileIO();
 
     public Game(){
         ArrayList<String> data;

@@ -13,11 +13,12 @@ Game *-- FileIO : has a
 Main : +Static Main(String[] args)
 
 Game : -ArrayList<Player> players
+Game : -FileIO fileio
 Game : +Game()
 
 Player : -BankAccount account
 Player : -String name
-Player : +Player(name, balance)
+Player : +Player(String name, int balance)
 Player : +getBalance()
 Player : +getName()
 Player : +toString()
@@ -27,7 +28,7 @@ FileIO : -File file
 FileIO : -ArrayList<String> data
 
 BankAccount : -int balance
-BankAccount : +BankAccount(balance)
+BankAccount : +BankAccount(int balance)
 BankAccount : +getBalance()
 
 
