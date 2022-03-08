@@ -13,7 +13,7 @@ public class Game {
 
         if(data == null){
             System.out.println("vi fandt ingen data");
-            data = textUi.getPlayerNames();
+            data = textUi.getPlayerNames("Skriv spillernavn. Tast q for at quitte");
         }
             createPlayers(data);
     }
