@@ -8,6 +8,7 @@ public class Main {
         System.out.println(game.players.get(0).getName());
         System.out.println(game.players.get(0).getBalance());
         System.out.println(game.players);
+
         //System.out.println(game.players.get(0).getAccount().getBalance());
     }
 }

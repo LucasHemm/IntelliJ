@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class FileIO {
     ArrayList<String> readGameData() {
 
-    File file = new File("src/data.txt");
+    File file = new File("src/pdata.txt");
     ArrayList<String> data = new ArrayList<>();
 
     try{
@@ -18,7 +18,7 @@ public class FileIO {
         }
     }
     catch(FileNotFoundException e) {
-        e.printStackTrace();
+        data = null;
     }
         return data;
     }
