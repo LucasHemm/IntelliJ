@@ -151,7 +151,3 @@ public class Main{
                }
         }
 }
-        /*letters.add('a'); letters.add('b'); letters.add('c'); letters.add('d'); letters.add('e'); letters.add('f');
-        letters.add('g'); letters.add('h'); letters.add('i'); letters.add('j'); letters.add('k'); letters.add('l');
-        letters.add('m'); letters.add('n'); letters.add('o'); letters.add('p'); letters.add('q'); letters.add('b');
-*/
