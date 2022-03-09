@@ -20,7 +20,10 @@ public class Game {
     private void createPlayers(ArrayList<String> data){
         for(String s : data){
             String[] values = s.split(": ");
+            //int balance = Integer.parseInt(values[1]);
             int balance = Integer.parseInt(values[1]);
+
+
             Player p = new Player(values[0], balance);
             players.add(p);
         }
