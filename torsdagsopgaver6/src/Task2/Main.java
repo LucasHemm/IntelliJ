@@ -12,8 +12,14 @@ public class Main {
         roomsList.add(room1);
         roomsList.add(room2);
         roomsList.add(room3);
-        Building building1 = new Building(roomsList,2,3,true);
-        
+        Building building1 = new Building(roomsList,2,5,true);
+        System.out.println(building1.getRooms().get(0).getNumberOfWindows() + building1.getRooms().get(1).getNumberOfWindows() + building1.getRooms().get(2).getNumberOfWindows());
+        int floorNum = building1.getNumberOfFloors();
+        int roomAmount = roomsList.size();
+        System.out.println(roomAmount);
+        if(floorNum > roomAmount){
+            System.out.println("This is an odd building");
+        }
 
     }
 }
