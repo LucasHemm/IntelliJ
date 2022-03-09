@@ -1,0 +1,41 @@
+@startuml
+
+
+object Game
+object Board
+object Buildings
+object Squares
+object Dice
+object Player
+object Account
+object Jail
+object Parking
+object Taxes
+object DoYouFeelLucky
+object House
+object Hotel
+object Properties
+object Start
+
+
+Properties o-- Buildings
+Squares <|-- Jail
+Squares <|-- Parking
+Squares <|-- Taxes
+Squares <|-- DoYouFeelLucky
+Squares <|-- Start
+Buildings o-- Hotel
+Buildings o-- House
+Board *-- Properties
+Player o-- Properties
+
+
+
+
+Board *-- Squares
+Game *-- Board
+Game *-- Dice
+Game *-- Player
+Player *-- Account
+
+@enduml

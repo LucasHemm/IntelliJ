@@ -25,6 +25,6 @@ public class Car {
 
     @Override
     public String toString(){
-       return ("Manufacturer: "+ manufacturer +". Model: "+model+ " ("+ year + "), BodyStyle: " + bodyStyle);
+       return "Manufacturer: "+ manufacturer +". Model: "+model+ " ("+ year + "), BodyStyle: " + bodyStyle;
     }
 }
