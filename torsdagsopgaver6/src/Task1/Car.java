@@ -5,14 +5,14 @@ public class Car {
     private String manufacturer;
     private String model;
     private int year;
-    private String bodystyle;
+    private String bodyStyle;
     private Driver driver;
 
-        public Car(String manufacturer, String model, int year, String bodystyle){
+        public Car(String manufacturer, String model, int year, String bodyStyle){
             this.manufacturer = manufacturer;
             this.model = model;
             this.year = year;
-            this.bodystyle = bodystyle;
+            this.bodyStyle = bodyStyle;
         }
 
     public Driver getDriver(){
@@ -21,5 +21,10 @@ public class Car {
 
     public void setDriver(Driver driver){
         this.driver = driver;
+    }
+
+    @Override
+    public String toString(){
+       return ("Manufacturer: "+ manufacturer +". Model: "+model+ " ("+ year + "), BodyStyle: " + bodyStyle);
     }
 }
