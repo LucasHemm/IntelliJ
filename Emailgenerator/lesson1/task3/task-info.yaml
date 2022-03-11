@@ -1,0 +1,76 @@
+type: edu
+files:
+- name: src/Task.java
+  visible: true
+  placeholders:
+  - offset: 20
+    length: 0
+    placeholder_text: ""
+    dependency:
+      lesson: lesson1
+      task: task2
+      file: src/Task.java
+      placeholder: 1
+      is_visible: false
+    initial_state:
+      length: 0
+      offset: 20
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: '    String [] organisations ={"CPHBusiness", "SpaceX",
+      "Brentford"};'
+  - offset: 90
+    length: 0
+    placeholder_text: ""
+    dependency:
+      lesson: lesson1
+      task: task2
+      file: src/Task.java
+      placeholder: 2
+      is_visible: false
+    initial_state:
+      length: 0
+      offset: 90
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: public String getOrganisation(int input)
+  - offset: 102
+    length: 5
+    placeholder_text: '     '
+    initial_state:
+      length: 5
+      offset: 102
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      if(input < organisations.length && input >= 0) {
+                  return organisations[input].toLowerCase();
+              }
+
+              return null;
+  text: "public class Task {\n\n\n    //Method for generating the second part of an\
+    \ email address\n     {\n\n             \n    }\n\n\n\n}"
+  learner_created: false
+- name: test/Tests.java
+  visible: false
+  text: |-
+    import org.junit.Assert;
+    import org.junit.Test;
+
+    public class Tests {
+      @Test
+      public void testSolution() {
+        // put your test here
+        Task t = new Task();
+        Assert.assertEquals("cphbusiness",t.getOrganisation(0));
+        Assert.assertEquals(null,t.getOrganisation(3));
+        Assert.assertEquals(null,t.getOrganisation(-1));
+
+      }
+    }
+  learner_created: false
+status: Unchecked
+record: -1

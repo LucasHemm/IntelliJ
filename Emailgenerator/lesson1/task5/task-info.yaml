@@ -1,0 +1,172 @@
+type: edu
+files:
+- name: test/Tests.java
+  visible: false
+  text: |-
+    import org.junit.Assert;
+    import org.junit.Test;
+
+    public class Tests {
+      @Test
+      public void testSolution() {
+        //test the getCountryCode method
+        Task t = new Task();
+        Assert.assertEquals("dk", t.getCountryCode("Denmark"));
+        Assert.assertEquals("co.uk", t.getCountryCode("Great Britain"));
+        Assert.assertEquals("com", t.getCountryCode("USA"));
+        Assert.assertEquals(null, t.getCountryCode("Greece"));
+      /*test the generateEmail method
+        String expectedIntials = t.getInitials(t.test_fullName);
+        String expectedContryCode = t.getCountryCode(t.test_country);
+        String expectedOrganisation = t.getOrganisation(t.test_organisation);
+        String expected = expectedIntials+"@"+expectedOrganisation+"."+expectedContryCode;
+        Assert.assertEquals(expected, t.generateEmail());*/
+
+      }
+    }
+  learner_created: false
+- name: src/Task.java
+  visible: true
+  placeholders:
+  - offset: 23
+    length: 0
+    placeholder_text: ""
+    dependency:
+      lesson: lesson1
+      task: task4_1
+      file: src/Task.java
+      placeholder: 1
+      is_visible: false
+    initial_state:
+      length: 0
+      offset: 23
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: ' String [] organisations ={"CPHBusiness", "SpaceX",
+      "Brentford"};'
+  - offset: 208
+    length: 0
+    placeholder_text: ""
+    dependency:
+      lesson: lesson1
+      task: task4_1
+      file: src/Task.java
+      placeholder: 2
+      is_visible: false
+    initial_state:
+      length: 0
+      offset: 208
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |
+      String initials = getInitials(test_fullName);
+              String organisation = getOrganisation(test_organisation);
+              String countryCode = getCountryCode(test_country);
+  - offset: 385
+    length: 0
+    placeholder_text: ""
+    dependency:
+      lesson: lesson1
+      task: task4_1
+      file: src/Task.java
+      placeholder: 3
+      is_visible: false
+    initial_state:
+      length: 0
+      offset: 385
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 'public String getInitials(String fullName) '
+  - offset: 488
+    length: 0
+    placeholder_text: ""
+    dependency:
+      lesson: lesson1
+      task: task4_1
+      file: src/Task.java
+      placeholder: 4
+      is_visible: false
+    initial_state:
+      length: 0
+      offset: 488
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: public String getOrganisation(int i)
+  - offset: 498
+    length: 0
+    placeholder_text: ""
+    dependency:
+      lesson: lesson1
+      task: task4_1
+      file: src/Task.java
+      placeholder: 5
+      is_visible: false
+    initial_state:
+      length: 0
+      offset: 498
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: " if(i < organisations.length && i >= 0) {\n      \
+      \      return organisations[i].toLowerCase();\n        }\n        return null;\n\
+      \   "
+  - offset: 567
+    length: 0
+    placeholder_text: ""
+    dependency:
+      lesson: lesson1
+      task: task4_1
+      file: src/Task.java
+      placeholder: 6
+      is_visible: false
+    initial_state:
+      length: 0
+      offset: 567
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 'public String getCountryCode(String country) '
+  - offset: 720
+    length: 16
+    placeholder_text: '                '
+    initial_state:
+      length: 16
+      offset: 720
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      String code;
+              switch (country) {
+                  case "Denmark":
+                      code = "dk";
+                      break;
+                  case "USA":
+                      code = "com";
+                      break;
+                  case "Great Britain":
+                      code = "co.uk";
+                      break;
+                  default:
+                      code = null;
+              }
+
+              return code;
+  text: "public class Task {\n   \n    //test data\n    String test_fullName = \"\
+    Christian Eriksen\";\n    int test_organisation = 2;\n    String test_country\
+    \ = \"Great Britain\";\n\n\n    public String generateEmail(){\n\n        \n \
+    \       String email = initials+\"@\"+organisation+\".\"+countryCode;\n      \
+    \  return email.toLowerCase();\n    }\n\n    //Method for generating the first\
+    \ part of an email address\n    {\n        return \"initials\";\n    }\n\n   \
+    \ //Method for generating the second part of an email adress\n     {\n       \
+    \ }\n\n    //Method for generating the last part of an email adress\n    {\n \
+    \       /*TODO:\n           1) Erlær en String variablen til landekoden,\n   \
+    \        2) skriv switch - case,\n           3) returner variablen */\n      \
+    \                  \n    }\n  \n}\n\n\n\n\n\n\n\n"
+  learner_created: false
+status: Unchecked
+record: -1

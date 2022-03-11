@@ -1,0 +1,16 @@
+title: Emailgenerator
+language: Danish
+summary: |-
+  I Lesson1 trænes metodekald med tildeling og tilhørende metodesignaturer.
+  Der bygges ovenpå begrænset viden om
+  - arrays: initialisering, gennemløb og hente værdier ud.
+  - betingelser i form af et if-statement og en switch-case.
+  I sidste del bliver du udfordret i det du skal anvende et par String metoder fra Java biblioteket.
+
+  Created: Feb 21, 2022, 9:41:48 PM.
+programming_language: Java
+content:
+- lesson1
+mode: Study
+vendor:
+  name: Tess Gaston Løvgreen

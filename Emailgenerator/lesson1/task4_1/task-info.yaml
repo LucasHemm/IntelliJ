@@ -1,0 +1,136 @@
+type: edu
+files:
+- name: src/Task.java
+  visible: true
+  placeholders:
+  - offset: 48
+    length: 0
+    placeholder_text: ""
+    dependency:
+      lesson: lesson1
+      task: task3
+      file: src/Task.java
+      placeholder: 1
+      is_visible: false
+    initial_state:
+      length: 0
+      offset: 48
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: '    String [] organisations ={"CPHBusiness", "SpaceX",
+      "Brentford"};'
+  - offset: 375
+    length: 5
+    placeholder_text: '     '
+    initial_state:
+      length: 5
+      offset: 375
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |2
+
+
+              String initials = getInitials(test_fullName);
+              String organisation = getOrganisation(test_organisation);
+              String countryCode = getCountryCode(test_country);
+  - offset: 598
+    length: 0
+    placeholder_text: ""
+    dependency:
+      lesson: lesson1
+      task: task4
+      file: src/Task.java
+      placeholder: 2
+      is_visible: false
+    initial_state:
+      length: 0
+      offset: 598
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: public String getInitials(String fullName)
+  - offset: 702
+    length: 3
+    placeholder_text: org
+    dependency:
+      lesson: lesson1
+      task: task4
+      file: src/Task.java
+      placeholder: 3
+      is_visible: false
+    initial_state:
+      length: 3
+      offset: 702
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 'public String getOrganisation(int i) '
+  - offset: 715
+    length: 0
+    placeholder_text: ""
+    dependency:
+      lesson: lesson1
+      task: task4
+      file: src/Task.java
+      placeholder: 4
+      is_visible: false
+    initial_state:
+      length: 0
+      offset: 715
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: "if(i < organisations.length && i >= 0) {\n       \
+      \     return organisations[i].toLowerCase();\n        }\n        return null;\n\
+      \    "
+  - offset: 783
+    length: 0
+    placeholder_text: ""
+    dependency:
+      lesson: lesson1
+      task: task4
+      file: src/Task.java
+      placeholder: 5
+      is_visible: false
+    initial_state:
+      length: 0
+      offset: 783
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: 'public String getCountryCode(String country) '
+  text: "import java.util.Scanner;\n\npublic class Task {\n\n\n    //test data\n \
+    \   public String test_fullName=\"Christian Eriksen\";\n    public int test_organisation=2;\n\
+    \    public String test_country= \"Great Britain\";\n\n\n    public String generateEmail(){\n\
+    \n/* TODO: initialiser tre variable 'initials', 'organisation' og 'countryCode'\
+    \ så de fanger returværdien fra kald til de tre metoder */     \n\n        //Anvendelse\
+    \ af de tre variable\n        String email = initials+\"@\"+organisation+\".\"\
+    +countryCode;\n        return email.toLowerCase();\n    }\n\n    //Method for\
+    \ generating the first part of an email address\n     {\n        return \"initials\"\
+    ;\n    }\n\n    //Method for generating the second part of an email adress\n \
+    \   org{\n        }\n\n    //Method for generating the last part of an email adress\n\
+    \    {\n\n        return \"country code\";\n    }\n\n}"
+  learner_created: false
+- name: test/Tests.java
+  visible: false
+  text: |-
+    import org.junit.Assert;
+    import org.junit.Test;
+
+    public class Tests {
+      @Test
+      public void testSolution() {
+        // put your test here
+        Task t = new Task();
+        String expectedIntials = t.getInitials(t.test_fullName);
+        String expectedContryCode = t.getCountryCode(t.test_country);
+        String expectedOrganisation = t.getOrganisation(t.test_organisation);
+        String expected = expectedIntials+"@"+expectedOrganisation+"."+expectedContryCode;
+        Assert.assertEquals(expected, t.generateEmail());
+      }
+    }
+  learner_created: false
+status: Unchecked
+record: -1

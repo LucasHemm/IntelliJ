@@ -1,0 +1,38 @@
+type: edu
+files:
+- name: src/Task.java
+  visible: true
+  placeholders:
+  - offset: 61
+    length: 7
+    placeholder_text: '       '
+    initial_state:
+      length: 7
+      offset: 61
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |2
+        String[] organisations = {"CPHBusiness", "SpaceX", "Brentford"};
+  text: "public class Task {\n    //Initialiser organisations array:\n         \n}"
+  learner_created: false
+- name: test/Tests.java
+  visible: false
+  text: |-
+    import org.junit.Assert;
+    import org.junit.Test;
+
+    public class Tests {
+      @Test
+      public void testSolution() {
+        // put your test here
+        Task t = new Task();
+        String[] expecteds= {"CPHBusiness","SpaceX","Brentford"};
+        Assert.assertArrayEquals(expecteds, t.organisations);
+       // Assert.assertEquals("CE@Brentford.co.uk",t.generateEmail());
+      }
+
+    }
+  learner_created: false
+status: Unchecked
+record: -1

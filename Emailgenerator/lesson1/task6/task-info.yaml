@@ -1,0 +1,199 @@
+type: edu
+files:
+- name: src/Task.java
+  visible: true
+  placeholders:
+  - offset: 273
+    length: 10
+    placeholder_text: /* TODO */
+    dependency:
+      lesson: lesson1
+      task: task5
+      file: src/Task.java
+      placeholder: 2
+      is_visible: false
+    initial_state:
+      length: 10
+      offset: 273
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      String initials = getInitials(test_fullName);
+              String organisation = getOrganisation(test_organisation);
+              String countryCode = getCountryCode(test_country);
+  - offset: 460
+    length: 10
+    placeholder_text: /* TODO */
+    dependency:
+      lesson: lesson1
+      task: task5
+      file: src/Task.java
+      placeholder: 3
+      is_visible: false
+    initial_state:
+      length: 10
+      offset: 460
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: ' public String getInitials(String fullName)'
+  - offset: 541
+    length: 0
+    placeholder_text: ""
+    initial_state:
+      length: 0
+      offset: 541
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: ' String [] names = fullName.split(" ");'
+  - offset: 623
+    length: 0
+    placeholder_text: ""
+    initial_state:
+      length: 0
+      offset: 623
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: '  String initials = "";'
+  - offset: 768
+    length: 0
+    placeholder_text: ""
+    initial_state:
+      length: 0
+      offset: 768
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      for (String name:names) {
+                  initials += name.charAt(0);
+              }
+  - offset: 825
+    length: 0
+    placeholder_text: ""
+    initial_state:
+      length: 0
+      offset: 825
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: initials
+  - offset: 901
+    length: 10
+    placeholder_text: /* TODO */
+    dependency:
+      lesson: lesson1
+      task: task5
+      file: src/Task.java
+      placeholder: 4
+      is_visible: false
+    initial_state:
+      length: 10
+      offset: 901
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: public String getOrganisation(int i)
+  - offset: 921
+    length: 10
+    placeholder_text: /* TODO */
+    dependency:
+      lesson: lesson1
+      task: task5
+      file: src/Task.java
+      placeholder: 5
+      is_visible: false
+    initial_state:
+      length: 10
+      offset: 921
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: " if(i < organisations.length && i >= 0) {\n      \
+      \      return organisations[i].toLowerCase();\n        }\n        return null;\n\
+      \   "
+  - offset: 999
+    length: 10
+    placeholder_text: /* TODO */
+    dependency:
+      lesson: lesson1
+      task: task5
+      file: src/Task.java
+      placeholder: 6
+      is_visible: false
+    initial_state:
+      length: 10
+      offset: 999
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: ' public String getCountryCode(String country) '
+  - offset: 1161
+    length: 10
+    placeholder_text: /* TODO */
+    dependency:
+      lesson: lesson1
+      task: task5
+      file: src/Task.java
+      placeholder: 7
+      is_visible: false
+    initial_state:
+      length: 10
+      offset: 1161
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |2-
+       String code;
+              switch (country) {
+                  case "Denmark":
+                      code = "dk";
+                      break;
+                  case "USA":
+                      code = "com";
+                      break;
+                  case "Great Britain":
+                      code = "co.uk";
+                      break;
+                  default:
+                      code = null;
+              }
+
+              return code;
+  text: "public class Task {\n    String [] organisations ={\"CPHBusiness\", \"SpaceX\"\
+    , \"Brentford\"};\n    //test data\n    String test_fullName = \"Christian Eriksen\"\
+    ;\n    int test_organisation = 2;\n    String test_country = \"Great Britain\"\
+    ;\n\n\n    public String generateEmail(){\n\n        /* TODO */\n\n        String\
+    \ email = initials+\"@\"+organisation+\".\"+countryCode;\n        return email.toLowerCase();\n\
+    \    }\n\n    //Method for generating the first part of an email address\n   /*\
+    \ TODO */ {\n\n        /*TODO: Lav array''et med navnene her (se hint 1)*/\n \
+    \      \n        /*TODO: Erklær en String variabel til at gemme alle forbogstaver*/\n\
+    \      \n        /*TODO: Gennemløb array''et, find for-bogstavet i hvert navn,\
+    \ og føj det til String variablen som skal returneres (se hint 2)*/\n        \n\
+    \        /*TODO: returner variablen*/\n\n\n\n\n        return ;\n    }\n\n   \
+    \ //Method for generating the second part of an email adress\n    /* TODO */ {\n\
+    \       /* TODO */ }\n\n    //Method for generating the last part of an email\
+    \ adress\n   /* TODO */{\n        /*TODO:\n           1) Erlær en String variablen\
+    \ til landekoden,\n           2) skriv switch - case,\n           3) returner\
+    \ variablen */\n       /* TODO */\n    }\n\n}\n\n\n\n\n\n\n\n"
+  learner_created: false
+- name: test/Tests.java
+  visible: false
+  text: |-
+    import org.junit.Assert;
+    import org.junit.Test;
+
+    public class Tests {
+      @Test
+      public void testSolution() {
+        // put your test here
+        Task t = new Task();
+        Assert.assertEquals("ce@brentford.co.uk", t.generateEmail());
+      }
+    }
+  learner_created: false
+status: Unchecked
+record: -1
