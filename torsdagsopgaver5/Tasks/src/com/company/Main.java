@@ -84,6 +84,7 @@ public class Main{
                 System.out.println(s.substring(0,s.length()/2));
             }
         }
+
     static ArrayList<Character> chars = new ArrayList<>();
     static ArrayList<Integer> charCount = new ArrayList<>();
         //task 3
