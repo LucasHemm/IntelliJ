@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 24
-    length: 0
+    length: 65
     placeholder_text: ""
     dependency:
       section: Grundlæggende programmering
@@ -16,20 +16,20 @@ files:
     initial_state:
       length: 0
       offset: 24
-    initialized_from_dependency: false
+    initialized_from_dependency: true
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |
       String [] organisations ={"CPHBusiness ", "SpaceX", "Brentford"};
-  - offset: 137
-    length: 24
+  - offset: 202
+    length: 39
     placeholder_text: '   //skriv her          '
     initial_state:
       length: 24
       offset: 137
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: "public String getOrganisation(int i)\n           \
       \                             "
   text: "public class Task {\n    \n\n    //Method for generating the second part\
@@ -51,5 +51,8 @@ files:
       }
     }
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Fri, 11 Mar 2022 08:52:32 UTC
 record: -1
