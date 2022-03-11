@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 21
-    length: 0
+    length: 64
     placeholder_text: ""
     dependency:
       lesson: lesson1
@@ -15,23 +15,23 @@ files:
     initial_state:
       length: 0
       offset: 21
-    initialized_from_dependency: false
+    initialized_from_dependency: true
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: '  String [] organisations ={"CPHBusiness", "SpaceX",
       "Brentford"};'
-  - offset: 90
-    length: 5
+  - offset: 154
+    length: 37
     placeholder_text: '     '
     initial_state:
       length: 5
       offset: 90
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: ' public String getInitials(String fullName)'
-  - offset: 200
-    length: 0
+  - offset: 295
+    length: 39
     placeholder_text: ""
     dependency:
       lesson: lesson1
@@ -42,12 +42,12 @@ files:
     initial_state:
       length: 0
       offset: 200
-    initialized_from_dependency: false
+    initialized_from_dependency: true
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: public String getOrganisation(int i)
-  - offset: 211
-    length: 0
+  - offset: 345
+    length: 107
     placeholder_text: ""
     dependency:
       lesson: lesson1
@@ -58,21 +58,21 @@ files:
     initial_state:
       length: 0
       offset: 211
-    initialized_from_dependency: false
+    initialized_from_dependency: true
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: "if(i < organisations.length && i >= 0) {\n       \
       \     return organisations[i].toLowerCase();\n        }\n        return null;\n\
       \    "
-  - offset: 279
-    length: 5
+  - offset: 520
+    length: 41
     placeholder_text: '     '
     initial_state:
       length: 5
       offset: 279
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: public String getCountryCode(String country)
   text: |-
     public class Task {
@@ -115,5 +115,8 @@ files:
       }
     }
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Fri, 11 Mar 2022 09:01:46 UTC
 record: -1

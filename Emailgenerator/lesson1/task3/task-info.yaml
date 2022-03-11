@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 20
-    length: 65
+    length: 64
     placeholder_text: ""
     dependency:
       lesson: lesson1
@@ -17,10 +17,10 @@ files:
       offset: 20
     initialized_from_dependency: true
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: '    String [] organisations ={"CPHBusiness", "SpaceX",
       "Brentford"};'
-  - offset: 155
+  - offset: 154
     length: 39
     placeholder_text: ""
     dependency:
@@ -34,17 +34,17 @@ files:
       offset: 90
     initialized_from_dependency: true
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: public String getOrganisation(int input)
-  - offset: 206
-    length: 5
+  - offset: 205
+    length: 107
     placeholder_text: '     '
     initial_state:
       length: 5
       offset: 102
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       if(input < organisations.length && input >= 0) {
                   return organisations[input].toLowerCase();
@@ -72,5 +72,8 @@ files:
       }
     }
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Fri, 11 Mar 2022 08:56:11 UTC
 record: -1

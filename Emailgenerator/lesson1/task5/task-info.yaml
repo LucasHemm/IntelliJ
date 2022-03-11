@@ -29,7 +29,7 @@ files:
   visible: true
   placeholders:
   - offset: 23
-    length: 0
+    length: 64
     placeholder_text: ""
     dependency:
       lesson: lesson1
@@ -40,13 +40,13 @@ files:
     initial_state:
       length: 0
       offset: 23
-    initialized_from_dependency: false
+    initialized_from_dependency: true
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: ' String [] organisations ={"CPHBusiness", "SpaceX",
       "Brentford"};'
-  - offset: 208
-    length: 0
+  - offset: 272
+    length: 178
     placeholder_text: ""
     dependency:
       lesson: lesson1
@@ -57,15 +57,15 @@ files:
     initial_state:
       length: 0
       offset: 208
-    initialized_from_dependency: false
+    initialized_from_dependency: true
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |
       String initials = getInitials(test_fullName);
               String organisation = getOrganisation(test_organisation);
               String countryCode = getCountryCode(test_country);
-  - offset: 385
-    length: 0
+  - offset: 627
+    length: 37
     placeholder_text: ""
     dependency:
       lesson: lesson1
@@ -76,12 +76,12 @@ files:
     initial_state:
       length: 0
       offset: 385
-    initialized_from_dependency: false
+    initialized_from_dependency: true
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: 'public String getInitials(String fullName) '
-  - offset: 488
-    length: 0
+  - offset: 767
+    length: 39
     placeholder_text: ""
     dependency:
       lesson: lesson1
@@ -92,12 +92,12 @@ files:
     initial_state:
       length: 0
       offset: 488
-    initialized_from_dependency: false
+    initialized_from_dependency: true
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: public String getOrganisation(int i)
-  - offset: 498
-    length: 0
+  - offset: 816
+    length: 107
     placeholder_text: ""
     dependency:
       lesson: lesson1
@@ -108,14 +108,14 @@ files:
     initial_state:
       length: 0
       offset: 498
-    initialized_from_dependency: false
+    initialized_from_dependency: true
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: " if(i < organisations.length && i >= 0) {\n      \
       \      return organisations[i].toLowerCase();\n        }\n        return null;\n\
       \   "
-  - offset: 567
-    length: 0
+  - offset: 992
+    length: 41
     placeholder_text: ""
     dependency:
       lesson: lesson1
@@ -126,19 +126,19 @@ files:
     initial_state:
       length: 0
       offset: 567
-    initialized_from_dependency: false
+    initialized_from_dependency: true
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: 'public String getCountryCode(String country) '
-  - offset: 720
-    length: 16
+  - offset: 1186
+    length: 337
     placeholder_text: '                '
     initial_state:
       length: 16
       offset: 720
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       String code;
               switch (country) {
@@ -168,5 +168,8 @@ files:
     \        2) skriv switch - case,\n           3) returner variablen */\n      \
     \                  \n    }\n  \n}\n\n\n\n\n\n\n\n"
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Fri, 11 Mar 2022 09:38:40 UTC
 record: -1

@@ -9,10 +9,8 @@ public class TextUI {
 
         String input = "";
 
-
         Scanner scan = new Scanner(System.in);
-
-
+        
         while(!input.equals("Q")){
             System.out.println(message);
             input = scan.nextLine();
