@@ -29,6 +29,9 @@ public class FileIO {
         try{
             Scanner scan = new Scanner(file);
             int i = 0;
+
+            String header = scan.nextLine(); // ignorer header inde i dokumentet
+            System.out.println(header);
             while (scan.hasNextLine()) {
                 data[i] = scan.nextLine();
                 i++;

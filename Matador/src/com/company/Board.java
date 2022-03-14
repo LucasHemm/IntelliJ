@@ -1,6 +1,6 @@
 package com.company;
 
-
+/*
 public class Board {
     Field[] fields = new String[40];
     String[] data;
@@ -29,3 +29,4 @@ public class Board {
     }
 
 }
+*/

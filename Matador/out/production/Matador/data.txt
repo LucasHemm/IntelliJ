@@ -1,3 +1,3 @@
-Lucas: 10000
-Hans: 20000
+Lucas: 30000
+Hans: 30000
 Peter: 30000

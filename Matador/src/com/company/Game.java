@@ -26,8 +26,7 @@ public class Game {
         String[] fieldData = fileIO.readFieldData();
         System.out.println(fieldData[0]);
         //Board board = new Board();
-
-
+        
     }
 
     private void createPlayers(ArrayList<String> data) {
