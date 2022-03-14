@@ -24,9 +24,9 @@ public class Game {
         //****************
         //loader field data
         String[] fieldData = fileIO.readFieldData();
-        System.out.println(fieldData[0]);
-        //Board board = new Board();
-        
+        System.out.println(fieldData[fieldData.length-1]);
+        Board board = new Board(fieldData);
+
     }
 
     private void createPlayers(ArrayList<String> data) {
