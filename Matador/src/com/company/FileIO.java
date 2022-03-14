@@ -30,8 +30,8 @@ public class FileIO {
             Scanner scan = new Scanner(file);
             int i = 0;
 
-            String header = scan.nextLine(); // ignorer header inde i dokumentet
-            System.out.println(header);
+            scan.nextLine(); // ignorer header inde i dokumentet
+
             while (scan.hasNextLine()) {
                 data[i] = scan.nextLine();
                 i++;

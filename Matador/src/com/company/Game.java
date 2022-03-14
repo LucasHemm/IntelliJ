@@ -24,8 +24,10 @@ public class Game {
         //****************
         //loader field data
         String[] fieldData = fileIO.readFieldData();
-        System.out.println(fieldData[fieldData.length-1]);
+        //System.out.println(fieldData[fieldData.length-1]);
+
         Board board = new Board(fieldData);
+        System.out.println(board.getField(39));
 
     }
 
