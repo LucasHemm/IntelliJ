@@ -15,14 +15,18 @@ public class Game {
             System.out.println("vi fandt ingen data");
             data = textUi.getPlayerNames("Skriv spillernavn. Tast Q for at quitte");
         }
-            createPlayers(data);
+           this.createPlayers(data);
     }
     private void createPlayers(ArrayList<String> data){
         for(String s : data){
             String[] values = s.split(": ");
-            //int balance = Integer.parseInt(values[1]);
-            int balance = Integer.parseInt(values[1]);
 
+            int balance;
+            if(values.length > 1) {
+                balance = Integer.parseInt(values[1]);
+            } else {
+                balance = Integer.parseInt("30000");
+            }
 
             Player p = new Player(values[0], balance);
             players.add(p);

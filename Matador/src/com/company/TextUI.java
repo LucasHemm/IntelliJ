@@ -11,11 +11,20 @@ public class TextUI {
 
         Scanner scan = new Scanner(System.in);
         
-        while(!input.equals("Q")){
+        /*while(!input.equals("Q")){
             System.out.println(message);
             input = scan.nextLine();
             data.add(input);
 
+        }*/
+        while(data.size() <= 6){
+            System.out.println(message);
+
+            input = scan.nextLine(); //Programmet går i stå og venter på at brugeren taster enter
+            if(input.equalsIgnoreCase("Q")){
+                break;
+            }
+            data.add(input);
         }
 
         return data;
