@@ -1,6 +1,8 @@
 package RPSgame;
 
 public interface Player {
-    int choose();
+    int choose(String message);
+    String getName(String playerNum);
+    String getName2();
 
 }

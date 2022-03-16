@@ -13,8 +13,9 @@ public class Main
         Player player2 = null;
         TextUI ui = new SysTextUI();
         String[] PlayerChoices = {"Human Player", "AI Player"};
-        int playerOneType = ui.select("Select Player1 type:", PlayerChoices, "Enter your choice:");
-        int playerTwoType = ui.select("Select Player2 type:", PlayerChoices, "Enter your choice:");
+        int playerOneType = ui.select("Select Player 1 type:", PlayerChoices, "Enter your choice:");
+        int playerTwoType = ui.select("Select Player 2 type:", PlayerChoices, "Enter your choice:");
+        ui.clear();
         boolean hotseat = playerOneType == 0 && playerTwoType == 0;
         if(playerOneType == 0)
         {

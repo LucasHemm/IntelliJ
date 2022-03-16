@@ -14,10 +14,26 @@ public class HumanPlayer implements Player{
     }
 
 
-    public int choose() {
+    public int choose(String message) {
         String[] choices = {"Rock", "Paper", "Scissors"};
-        int choice = ui.select("Please choose your weapon of combat", choices, "press enter when ready!");
+        int choice = ui.select(message + ", please choose your weapon of combat", choices, "press enter when ready!");
         return choice;
-
     }
+
+    public String getName(String playerNum)
+    {
+
+        if(name == null)
+        {
+            ui.print(playerNum + ": What is your name?");
+            name = ui.get();
+            ui.clear();
+        }
+        return name;
+    }
+    public String getName2()
+    {
+        return name;
+    }
+
 }
