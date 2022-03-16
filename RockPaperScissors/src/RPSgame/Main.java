@@ -16,22 +16,21 @@ public class Main
         int playerOneType = ui.select("Select Player 1 type:", PlayerChoices, "Enter your choice:");
         int playerTwoType = ui.select("Select Player 2 type:", PlayerChoices, "Enter your choice:");
         ui.clear();
-        boolean hotseat = playerOneType == 0 && playerTwoType == 0;
         if(playerOneType == 0)
         {
-            player1 = new HumanPlayer(hotseat, ui);
+            player1 = new HumanPlayer(ui);
         }
         else
         {
-            player1 = new AIPlayer();
+            player1 = new AIPlayer("Player 1");
         }
         if(playerTwoType == 0)
         {
-            player2 = new HumanPlayer(hotseat, ui);
+            player2 = new HumanPlayer(ui);
         }
         else
         {
-            player2 = new AIPlayer();
+            player2 = new AIPlayer("Player 2");
         }
         GameCtrl gameCtrl = new GameCtrl(ui);
         gameCtrl.runGame(player1, player2);

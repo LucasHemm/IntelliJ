@@ -29,7 +29,6 @@ public class GameCtrl {
             ui.print("Press enter to start turn");
             ui.get();
             ui.clear();
-
         }
 
         if(player1Result == 3){
