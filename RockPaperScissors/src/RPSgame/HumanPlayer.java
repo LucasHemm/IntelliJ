@@ -15,6 +15,9 @@ public class HumanPlayer implements Player{
 
 
     public int choose() {
-        return 0;
+        String[] choices = {"Rock", "Paper", "Scissors"};
+        int choice = ui.select("Please choose your weapon of combat", choices, "press enter when ready!");
+        return choice;
+
     }
 }

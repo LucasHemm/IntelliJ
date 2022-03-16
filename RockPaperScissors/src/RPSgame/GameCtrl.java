@@ -17,8 +17,8 @@ public class GameCtrl {
         int player2Result = 0;
         while(player1Result != 3 || player2Result != 3){
 
-            player1.choose();
-            player2.choose();
+            int p1choice = player1.choose();
+            int p2choice = player2.choose();
             evaluate();
 
         }
