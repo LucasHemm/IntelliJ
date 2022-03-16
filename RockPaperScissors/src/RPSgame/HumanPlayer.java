@@ -1,4 +1,4 @@
 package RPSgame;
 
-public class HumanPlayer {
+public class HumanPlayer implements Player{
 }

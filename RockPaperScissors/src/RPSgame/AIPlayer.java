@@ -1,4 +1,4 @@
 package RPSgame;
 
-public class AIPlayer {
+public class AIPlayer implements Player{
 }
