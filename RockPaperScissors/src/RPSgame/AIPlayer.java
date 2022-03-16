@@ -2,7 +2,7 @@ package RPSgame;
 
 public class AIPlayer implements Player{
     @Override
-    public int guess() {
+    public int choose() {
         return 0;
     }
 }

@@ -13,8 +13,8 @@ public class HumanPlayer implements Player{
 
     }
 
-    @Override
-    public int guess() {
+
+    public int choose() {
         return 0;
     }
 }
