@@ -22,7 +22,7 @@ public class Main
         }
         else
         {
-            player1 = new AIPlayer("Player 1");
+            player1 = new AIPlayer("AI 1");
         }
         if(playerTwoType == 0)
         {
@@ -30,7 +30,7 @@ public class Main
         }
         else
         {
-            player2 = new AIPlayer("Player 2");
+            player2 = new AIPlayer("AI 2");
         }
         GameCtrl gameCtrl = new GameCtrl(ui);
         gameCtrl.runGame(player1, player2);
