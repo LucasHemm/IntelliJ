@@ -1,4 +1,5 @@
 package com.company;
+import java.util.Optional;
 
 public class Field {
     private String label;
@@ -8,7 +9,9 @@ public class Field {
     private int income;
     private int seriesID;
     private Player owner;
-    public Field(int id, String label,String fieldType, int cost,int income,int seriesID){
+    private String currentOption;
+
+    public Field(int id, String label, String fieldType, int cost, int income, int seriesID) {
         this.id = id;
         this.label = label;
         this.fieldType = fieldType;
@@ -17,33 +20,74 @@ public class Field {
         this.seriesID = seriesID;
     }
 
-    public String onLand(Player player){
-        if(fieldType == "plot"){
-            if(owner==null){
-                return "Vil du købe? Y for ja, N for nej";
-            }else if(owner == player){
-                return "Du ejer denne grund";
-            }else{
-                return "Betal husleje";
-            }
+    public String onLand(Player player) {
+        String message = "";
+
+        switch (fieldType) {
+            case "Plot":
+                if (owner == null) {
+                    currentOption = "buy";
+                    message = "Vil du kÃ¸be? Y for ja, N for nej";
+                } else if (owner == player) {
+                    currentOption = "build"; //Currentoption build
+                    message = "Du ejer denne grund, vil du opgradere dit grund? Y for ja, N for nej";
+                } else {
+                    currentOption = "payRent"; //Currentoption payRent
+                    message = "Betal husleje";
+                }
+                break;
+            case "Chance":
+                message = this.label;
+                break;
+            case "Start":
+                message = "Tag startbeløb";
+                break;
+            case "Tax":
+                message = "Betal skat";
+                break;
+            case "ShippingLine":
+                message = "Shippingline";
+                break;
+            case "Parking":
+                message = "Parker her gratis i en runde";
+                break;
+            case "Brewery":
+                message = "Brewery";
+                break;
+            case "Prison":
+                message = "Gå i fængsel";
+                break;
         }
-        return "Do something else";
+        return message;
     }
 
-    public String onProceess(String response){
+    public String onProceess(Player player, String response) {
+        if (response.equalsIgnoreCase("Y")) {
+            this.onAccept(player);
+        } else {
+            this.onReject(player);
+        }
         return null;
     }
 
-    private String onAccept(Player player){
-        return null;
+    private String onAccept(Player player) {
+        String message = "";
+        if (this.currentOption.equals("buy")) {
+            message = (player.getName() + " decided to buy");
+            owner = player;
+            //player.buyProperty(cost);
+        }
+        return message;
     }
 
-    private void onReject(Player player){
-
+    private void onReject(Player player) {
+        if (this.currentOption.equals("buy")) {
+            System.out.println(player.getName() + " decided NOT to buy");
+        }
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return id + " " + label;
     }
 

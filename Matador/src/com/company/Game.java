@@ -39,6 +39,8 @@ public class Game {
     private void takeTurn(){
         int value = dice.rollDiceSum();
         textUI.displayMessage(this.currentPlayer.getName() + " Slog " + value);
+        currentPlayer.updatePosition(value);
+        System.out.println(currentPlayer.getCurrentPosition()); //********************************************** TEMP
     }
 
 

@@ -27,4 +27,19 @@ public class TextUI {
         System.out.println(msg);
     }
 
+    public String getUserInput(String message)
+    {
+        displayMessage(message);
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+
+        if(input.equalsIgnoreCase("Y")|| input.equalsIgnoreCase("N"))
+        {
+            System.out.println("Dit svar er ikke gyldigt. Dit svar skal være y eller n. Prøv igen");
+            getUserInput(message);
+        }
+
+        return input;
+    }
+
 }

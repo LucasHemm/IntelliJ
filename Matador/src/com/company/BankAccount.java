@@ -8,4 +8,15 @@ public class BankAccount {
     public int getBalance(){
         return this.balance;
     }
+
+    public boolean doTransaction(int amount) {
+        //int balanceA = balance + amount;
+        this.balance = balance + amount;
+        if (balance > 0) {
+            //System.out.println("True");
+            return true;
+        }
+            return false;
+
+    }
 }
