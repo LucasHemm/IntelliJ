@@ -7,6 +7,7 @@ public class Game {
     private FileIO fileIO = new FileIO();
     private TextUI textUI = new TextUI();
     private Dice dice = new Dice();
+    private Player currentPlayer;
 
     public Game() {
 
@@ -28,14 +29,18 @@ public class Game {
         //System.out.println(fieldData[fieldData.length-1]);
 
         Board board = new Board(fieldData);
-        System.out.println(board.getField(39));
+        //System.out.println(board.getField(39));
+
+        //GAMELOOP
+        this.currentPlayer = this.players.get(0);
+        takeTurn();
     }
 
     private void takeTurn(){
-
-        dice.rollDiceSum();
-
+        int value = dice.rollDiceSum();
+        textUI.displayMessage(this.currentPlayer.getName() + " Slog " + value);
     }
+
 
     private void createPlayers(ArrayList<String> data) {
 

@@ -22,4 +22,9 @@ public class TextUI {
 
         return data;
     }
+
+    public void displayMessage(String msg){
+        System.out.println(msg);
+    }
+
 }
