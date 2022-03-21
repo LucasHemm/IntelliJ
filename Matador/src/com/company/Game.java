@@ -6,6 +6,7 @@ public class Game {
     ArrayList<Player> players = new ArrayList<>();
     private FileIO fileIO = new FileIO();
     private TextUI textUI = new TextUI();
+    private Dice dice = new Dice();
 
     public Game() {
 
@@ -28,6 +29,11 @@ public class Game {
 
         Board board = new Board(fieldData);
         System.out.println(board.getField(39));
+    }
+
+    private void takeTurn(){
+
+        dice.rollDiceSum();
 
     }
 
