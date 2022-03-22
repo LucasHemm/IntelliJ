@@ -8,6 +8,7 @@ public class Game {
     private TextUI textUI = new TextUI();
     private Dice dice = new Dice();
     private Player currentPlayer;
+    private Board board;
 
     public Game() {
 
@@ -28,8 +29,8 @@ public class Game {
         String[] fieldData = fileIO.readFieldData();
         //System.out.println(fieldData[fieldData.length-1]);
 
-        Board board = new Board(fieldData);
-        //System.out.println(board.getField(39));
+        board = new Board(fieldData);
+        //System.out.println(board.getField(11));
 
         //GAMELOOP
         this.currentPlayer = this.players.get(0);
@@ -40,7 +41,14 @@ public class Game {
         int value = dice.rollDiceSum();
         textUI.displayMessage(this.currentPlayer.getName() + " Slog " + value);
         currentPlayer.updatePosition(value);
-        System.out.println(currentPlayer.getCurrentPosition()); //********************************************** TEMP
+        System.out.println("current position " + currentPlayer.getCurrentPosition()); //********************************************** TEMP
+        Field f = board.getField(currentPlayer.getCurrentPosition());
+        String s = f.onLand(currentPlayer);
+        String response = textUI.getUserInput(s);
+        String processResponse = f.onProceess(currentPlayer, response);
+        textUI.displayMessage(processResponse + currentPlayer.getBalance());
+
+
     }
 
 

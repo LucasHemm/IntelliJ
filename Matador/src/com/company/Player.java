@@ -36,13 +36,7 @@ public class Player {
             recipient.account.doTransaction(amount);
         }
     }
-
-
-
-
-
-
-
+    
     public int getCurrentPosition(){
         return currentPosition;
     }

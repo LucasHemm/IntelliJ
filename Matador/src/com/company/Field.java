@@ -27,7 +27,7 @@ public class Field {
             case "Plot":
                 if (owner == null) {
                     currentOption = "buy";
-                    message = "Vil du kÃ¸be? Y for ja, N for nej";
+                    message = "Vil du købe? Y for ja, N for nej";
                 } else if (owner == player) {
                     currentOption = "build"; //Currentoption build
                     message = "Du ejer denne grund, vil du opgradere dit grund? Y for ja, N for nej";
