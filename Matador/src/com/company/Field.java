@@ -21,47 +21,47 @@ public class Field {
     }
 
     public String onLand(Player player) {
-        String message = "";
+        String message = "You landed on " + this.toString() + "\n";
 
         switch (fieldType) {
             case "Plot":
                 if (owner == null) {
                     currentOption = "buy";
-                    message = "Vil du købe? Y for ja, N for nej";
+                    message += "Vil du købe? Y for ja, N for nej";
                 } else if (owner == player) {
                     currentOption = "build"; //Currentoption build
-                    message = "Du ejer denne grund, vil du opgradere dit grund? Y for ja, N for nej";
+                    message += "Du ejer denne grund, vil du opgradere dit grund? Y for ja, N for nej";
                 } else {
                     currentOption = "payRent"; //Currentoption payRent
-                    message = "Betal husleje";
+                    message += "Betal husleje";
                 }
                 break;
             case "Chance":
-                message = this.label;
+                message += this.label;
                 break;
             case "Start":
-                message = "Tag startbeløb";
+                message += "Tag startbeløb";
                 break;
             case "Tax":
-                message = "Betal skat";
+                message += "Betal skat";
                 break;
             case "ShippingLine":
-                message = "Shippingline";
+                message += "Shippingline";
                 break;
             case "Parking":
-                message = "Parker her gratis i en runde";
+                message += "Parker her gratis i en runde";
                 break;
             case "Brewery":
-                message = "Brewery";
+                message += "Brewery";
                 break;
             case "Prison":
-                message = "Gå i fængsel";
+                message += "Gå i fængsel";
                 break;
         }
         return message;
     }
-    
-    public String onProceess(Player player, String response){
+
+    public String processResponse(Player player, String response){
         String s = "";
         if (response.equalsIgnoreCase("Y")) {
             s = this.onAccept(player);
@@ -76,7 +76,7 @@ public class Field {
         if (this.currentOption.equals("buy")) {
             message = (player.getName() + " decided to buy");
             owner = player;
-            //player.buyProperty(cost);
+            player.buyProperty(cost, id);
         }
         return message;
     }

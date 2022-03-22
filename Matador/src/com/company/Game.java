@@ -38,17 +38,15 @@ public class Game {
     }
 
     private void takeTurn(){
-        int value = dice.rollDiceSum();
-        textUI.displayMessage(this.currentPlayer.getName() + " Slog " + value);
-        currentPlayer.updatePosition(value);
-        //System.out.println("current position " + currentPlayer.getCurrentPosition()); //********************************************** TEMP
-        Field f = board.getField(currentPlayer.getCurrentPosition());
-        System.out.println("You landed on " + board.getField(currentPlayer.getCurrentPosition()));
-        String s = f.onLand(currentPlayer);
-        String response = textUI.getUserInput(s);
-        String processResponse = f.onProceess(currentPlayer, response);
-        textUI.displayMessage(processResponse+ ", " + board.getField(currentPlayer.getCurrentPosition()) + ".\nTheir Bank balance: " + currentPlayer.getBalance());
-
+        int diceValue =  1; //dice.rollDiceSum();
+        textUI.displayMessage(this.currentPlayer.getName() + " Rolled " + diceValue);
+        int position = currentPlayer.updatePosition(diceValue);
+        Field f = board.getField(position);
+       // System.out.println("You landed on " + f);
+        String decisionRequest = f.onLand(currentPlayer);
+        String response = textUI.getUserInput(decisionRequest);
+        String processedResponse = f.processResponse(currentPlayer, response);
+        textUI.displayMessage(processedResponse+ ", " + board.getField(position) + ".\nTheir Bank balance: " + currentPlayer.getBalance());
 
     }
 

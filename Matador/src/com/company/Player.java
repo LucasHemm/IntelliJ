@@ -22,21 +22,21 @@ public class Player {
         return this.name + ": " + account.getBalance();
     }
 
-    private void buyProperty(int amount, int id){
+    public void buyProperty(int amount, int id){
         this.account.doTransaction(-amount);
     }
 
-    private void receiveMoney(int amount){
+    public void receiveMoney(int amount){
         this.account.doTransaction(amount);
     }
 
-    private void payRent(int amount, Player recipient){
+    public void payRent(int amount, Player recipient){
         boolean result = this.account.doTransaction(-amount);
         if(result == true) {
             recipient.account.doTransaction(amount);
         }
     }
-    
+
     public int getCurrentPosition(){
         return currentPosition;
     }
