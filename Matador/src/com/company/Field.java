@@ -60,14 +60,15 @@ public class Field {
         }
         return message;
     }
-
-    public String onProceess(Player player, String response) {
+    
+    public String onProceess(Player player, String response){
+        String s = "";
         if (response.equalsIgnoreCase("Y")) {
-            this.onAccept(player);
-        } else {
-            this.onReject(player);
+            s = this.onAccept(player);
+        } else{
+              s = this.onReject(player);
         }
-        return null;
+        return s;
     }
 
     private String onAccept(Player player) {
@@ -80,10 +81,13 @@ public class Field {
         return message;
     }
 
-    private void onReject(Player player) {
+
+    private String onReject(Player player) {
+        String msg = "";
         if (this.currentOption.equals("buy")) {
-            System.out.println(player.getName() + " decided NOT to buy");
+            msg = player.getName() + " decided NOT to buy";
         }
+        return msg;
     }
 
     @Override

@@ -41,12 +41,13 @@ public class Game {
         int value = dice.rollDiceSum();
         textUI.displayMessage(this.currentPlayer.getName() + " Slog " + value);
         currentPlayer.updatePosition(value);
-        System.out.println("current position " + currentPlayer.getCurrentPosition()); //********************************************** TEMP
+        //System.out.println("current position " + currentPlayer.getCurrentPosition()); //********************************************** TEMP
         Field f = board.getField(currentPlayer.getCurrentPosition());
+        System.out.println("You landed on " + board.getField(currentPlayer.getCurrentPosition()));
         String s = f.onLand(currentPlayer);
         String response = textUI.getUserInput(s);
         String processResponse = f.onProceess(currentPlayer, response);
-        textUI.displayMessage(processResponse + currentPlayer.getBalance());
+        textUI.displayMessage(processResponse+ ", " + board.getField(currentPlayer.getCurrentPosition()) + ".\nTheir Bank balance: " + currentPlayer.getBalance());
 
 
     }
