@@ -6,11 +6,34 @@ abstract public class ACar implements Car{
     String numberOfDoors;
 
     @Override
-    public int getRegistrationFee() {
-        return 0;
+    public String getRegistrationNumber() {
+        return null;
     }
 
     @Override
-    String toString();
-
+    public String getMake() {
+        return null;
     }
+
+    @Override
+    public String getModel() {
+        return null;
+    }
+
+    @Override
+    public int getNumberOfDoors() {
+        return 0;
+    }
+    /*
+    @Override
+    public int getRegistrationFee() {
+        return 0;
+    }
+    */
+
+    @Override
+    public String toString() {
+        return "Dette er en tostring inde i ACar";
+    }
+}
+
