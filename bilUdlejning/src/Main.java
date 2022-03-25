@@ -18,5 +18,6 @@ public class Main {
         //System.out.println(W13);
         System.out.println(fleet);
         System.out.println(fleet.getTotalFee());
+        //System.out.println(Tesla.getModel());
     }
 }

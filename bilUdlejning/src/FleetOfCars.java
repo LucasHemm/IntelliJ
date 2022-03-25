@@ -1,8 +1,15 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class FleetOfCars {
 
-    ArrayList<Car> fleet = new ArrayList<>();
+    ArrayList<Car> fleet;
+    public FleetOfCars(){
+        fleet = new ArrayList<>();
+
+    }
+
+    //ArrayList<Car> fleet = new ArrayList<>();
 
 
     public void addCar(Car car){
