@@ -19,13 +19,6 @@ public class ElectricCar extends ACar {
     }
 
     public int getWhPrKm(){
-
-        /*
-        For en Elbil gælder de samme regler som for en benzinbil, blot skal man først omregne
-        watt-timer pr kilometer til km/l. Det gøres ved at dividere Wh/km med 91,25 og dernæst
-        dividere 100 med dette tal. Se evt. formlen her:
-         */
-
         return getBatteryCapacityKWh() / getMaxRangeKm(); // km/l
     }
 
